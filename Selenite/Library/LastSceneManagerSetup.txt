@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/Tests/Tests_deplacements.unity
+  isLoaded: 1
+  isActive: 1
