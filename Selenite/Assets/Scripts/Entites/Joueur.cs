@@ -3,15 +3,20 @@ using System.Collections;
 
 public class Joueur : MonoBehaviour {
 
-    EntiteMouvements mouvements;
+    /**Les mouvements du joueur.*/
+    protected EntiteMouvements mouvements;
+
+    /**Le contrôleur permettant de déplacer le joueur*/
+    public JoueurControleur controleur;
 
 	// Use this for initialization
 	void Awake () {
-        mouvements = new EntiteMouvements(this.transform);
+        mouvements = new JoueurMouvements(this.transform, controleur);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        mouvements.UpdatePosition();
+        mouvements.updatePosition();
 	}
 }
